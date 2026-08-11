@@ -24,7 +24,7 @@ def send_to_table(text):
         return f"❌ Ошибка соединения: {e}"
 
 def main():
-    vk_session = vk.VK(token=VK_TOKEN)
+    vk_session = vk.API(token=VK_TOKEN)
     longpoll = vk_session.longpoll()
     
     print("🤖 Бот запущен и слушает чат ВК...")
