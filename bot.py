@@ -1,4 +1,4 @@
-import vk_api
+import vk
 import requests
 import time
 import json
@@ -24,8 +24,8 @@ def send_to_table(text):
         return f"❌ Ошибка соединения: {e}"
 
 def main():
-    vk_session = vk_api.VkApi(token=VK_TOKEN)
-    longpoll = vk_api.longpoll.VkLongPoll(vk_session)
+    vk_session = vk.VK(token=VK_TOKEN)
+    longpoll = vk_session.longpoll()
     
     print("🤖 Бот запущен и слушает чат ВК...")
     
